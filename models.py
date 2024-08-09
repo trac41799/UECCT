@@ -321,8 +321,8 @@ class ECC_Transformer(nn.Module):
             # torch.randn(np.shape(z_mean)).to(device) * torch.std(y, dim = -1, keepdim = True).unsqueeze(-1)
             kl_pred = torch.normal(mean=z_mean, std=torch.sqrt(torch.exp(z_logvar)))
             kl_loss = -F.kl_div(kl_pred, kl_target, reduction='none').mean()
-        #mask_loss = torch.mean(torch.square(self.attn.err))
-        #loss = cce_loss + mask_loss
+            loss = loss + kl_loss
+        
         x_pred = sign_to_bin(torch.sign(-z_pred * torch.sign(y)))
         return loss, x_pred
 
