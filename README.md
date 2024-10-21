@@ -1,5 +1,5 @@
 # UECCT
-This is the repository of an official implementation for the model from the paper: 
+This is the official implementation of the U-ECCT model from the paper: 
 
 D. -T. Nguyen and S. Kim, "U-shaped Error Correction Code Transformers," in IEEE Transactions on Cognitive Communications and Networking, Oct. 2024. doi: 10.1109/TCCN.2024.3482349
 
